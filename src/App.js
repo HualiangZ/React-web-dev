@@ -2,12 +2,15 @@ import LoginScreen from './Component/Login';
 import Home from "./Component/Home"
 import Blog from "./Component/Blog"
 import BlogPost from "./Component/BlogPost"
+import BlogContent from "./Component/BlogContent"
 import Camera from "./Component/Camera"
+import Data from "./UserData/Login.json"
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
 
 function App() {
   return(
@@ -30,10 +33,15 @@ function App() {
         />
 
         <Route
-          path='/blogpost'
+          path='/blogpost/:CatID'
           element={<BlogPost/>}
         />
-        
+
+        <Route
+          path='/blogcontent/:CatID/:ContID'
+          element={<BlogContent/>}
+        />
+
           <Route
           path='/camera'
           element={<Camera/>}

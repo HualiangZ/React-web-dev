@@ -20,6 +20,7 @@ function Login()
         });
 
         if(found){
+            Data.auth = true;
             navigate("/home");
         }else{
             alert("Password incorrect")

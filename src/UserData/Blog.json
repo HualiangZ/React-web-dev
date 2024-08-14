@@ -4,66 +4,49 @@
             "key": "Catagory1",
             "Catagory": [
             {
-                "key": "post1",
-                "post1": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post1 Cat1",
+                "Blog": "blog post 1"
             },
             {
-                "key": "post2",
-                "post2": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post2 Cat1",
+                 "Blog": "blog post 1"
+
             },
             {
-                "key": "post3",
-                "post3": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post3 Cat1",
+                 "Blog": "blog post 1"
             }
         ]},
         {
             "key": "Catagory2",
             "Catagory": [
             {
-                "key": "post4",
-                "post1": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post1 Cat2",
+                "Blog": "blog post 1"
             },
             {
-                "key": "post2",
-                "post2": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post2 Cat2",
+                "Blog": "blog post 1"
             },
             {
-                "key": "post3",
-                "post3": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post3 Cat2",
+                "Blog": "blog post 1"   
             }
         ]},
         {
             "key": "Catagory3",
             "Catagory": [
             {
-                "key": "post1",
-                "post1": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post1 Cat3",
+                "Blog": "blog post 1"
             },
             {
-                "key": "post2",
-                "post2": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post2 Cat3",
+                "Blog": "blog post 1"
             },
             {
-                "key": "post3",
-                "post3": {
-                    "Blog": "blog post 1"
-                }
+                "key": "post3 Cat3",
+                "Blog": "blog post 1"
             }
         ]}
     ]

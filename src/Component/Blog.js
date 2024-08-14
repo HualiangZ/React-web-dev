@@ -1,16 +1,14 @@
 import Blogs from "../UserData/Blog.json"
-import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 export default function Blog() {
-    const [i , setI] = useState();
     const navigate = useNavigate();
 
     function Buttons({index}){
         return(
             <div>
                 <button className="button" 
-                onClick={navigate("/blogpost")}
+                onClick={()=>navigate(`/blogpost/${index}`)}
                 >
                     {Blogs.Blogs[index].key}
                 </button>

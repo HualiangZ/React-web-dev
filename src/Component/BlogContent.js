@@ -1,12 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import Blogs from "../UserData/Blog.json"
+import { useNavigate, useParams } from "react-router-dom";
 
-
-export default function Camera(){
+export default function BlogContent(prop){
     const navigate = useNavigate();
+    const { CatID, ContID } = useParams()
     return(
         <div>
-
-            <h1>camera</h1>
+            <h1>
+                {Blogs.Blogs[CatID].Catagory[ContID].key}
+            </h1>
+            <p>
+                {Blogs.Blogs[CatID].Catagory[ContID].Blog}
+            </p>
             <button className="Blog"
                 onClick={() => navigate("/blog")}
             >
@@ -19,6 +24,5 @@ export default function Camera(){
                 Camera
             </button>
         </div>
-        
     )
 }
