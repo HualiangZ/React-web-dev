@@ -1,6 +1,7 @@
 import LoginScreen from './Component/Login';
 import Home from "./Component/Home"
 import Blog from "./Component/Blog"
+import BlogPost from "./Component/BlogPost"
 import Camera from "./Component/Camera"
 import {
   BrowserRouter as Router,
@@ -28,10 +29,17 @@ function App() {
           element={<Blog/>}
         />
 
+        <Route
+          path='/blogpost'
+          element={<BlogPost/>}
+        />
+        
           <Route
           path='/camera'
           element={<Camera/>}
         />
+
+
       </Routes>
 
     </Router>
