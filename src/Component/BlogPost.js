@@ -1,44 +1,41 @@
 import Blogs from "../UserData/Blog.json"
 import { useState } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
-
+import "../DesignFile/Design.css"
 export default function BlogPost() {
     const { CatID } = useParams()
     const navigate = useNavigate();
     return(
-        <div>
-            <h1>
-                {Blogs.Blogs[CatID].key}
-            </h1>
-
-            <ul className="list-unstyled" style ={{listStyle:'none'}}>
+        <div class = "Container">
+            <div class="List">
             {
                 Blogs.Blogs[CatID].Catagory.map((value, index) => {
                     return (
-                        <li key={index} >
-                            <button className="button" 
-                            onClick={() => navigate(`/blogcontent/${CatID}/${index}`)}
-                            >
-                                {Blogs.Blogs[CatID].Catagory[index].key}
-                            </button>
-                        </li>
+                        <button class="PostButton" 
+                        onClick={() => navigate(`/blogcontent/${CatID}/${index}`)}
+                        >
+                            {Blogs.Blogs[CatID].Catagory[index].key}
+                        </button>
                     )
                 })
             }
-        </ul>
-        <button className="Blog"
+            </div>
+
+        <div class = "BottomContainer">
+            <button class="Blog"
+                style={{background: "#295EF4"}}
                 onClick={() => navigate("/blog")}
-            >
-                Blog
-            </button>
+                >
+                    Blog
+                </button>
 
-            <button className="Camera"
-                onClick={() => navigate("/camera")}
-            >
-                Camera
-            </button>
+                <button class="Camera"
+                    onClick={() => navigate("/camera")}
+                >
+                    Camera
+                </button>
 
-
+        </div>
 
 
         </div>

@@ -2,6 +2,7 @@ import Data from "../UserData/Login.json"
 import React, { Component } from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import "../DesignFile/Design.css"
 function Login()
 {
     const [username, setUsername] = useState();
@@ -29,31 +30,35 @@ function Login()
     }
   
     return (
-      <div>
-            <h1>
+      <div class="LoginContainer">
+            <h1 class="header">
                 Wellcome
             </h1>
-            <div className="UsernameBox">
+            <div class="UsernameBox">
                 <input type="text" 
+                class="Username"
                 placeholder="Username" 
                 defaultValue={username} 
                 onChange={e => setUsername(e.target.value)}
                 />
             </div>
   
-            <div className="PasswordBox">
+            <div class="PasswordBox">
                 <input type="text" 
+                class="Password"
                 placeholder="Password" 
                 defaultValue={password} 
                 onChange={e => setPassword(e.target.value)}
                 />
             </div>
   
-            <button className="Login"
-            onClick={Login}
-            >
-                Login
-            </button>
+            <div class = "Login">
+                <button class="LoginButton"
+                onClick={Login}
+                >
+                    Login
+                </button>
+            </div>
       </div>
     );
 }

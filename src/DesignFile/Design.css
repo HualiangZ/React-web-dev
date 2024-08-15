@@ -1,0 +1,113 @@
+.header{
+  align-self: center;
+  padding-top: 10px;
+}
+
+.Container{
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  background-image: url(../Images/bgImage.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
+
+.BottomContainer {
+  min-height :100px;
+  position: sticky;
+  bottom:0;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+}
+
+.Blog {
+  background-color: #5EBEF0;
+  border: none;
+  width:50%;
+  display:block;
+  font-size: 30px;
+}
+
+.Camera {
+  background-color: #5EBEF0;
+  border: none;
+  width:50%;
+  display:block;
+  font-size: 30px;
+}
+.List{
+  align-content: center;
+  flex-direction: column;
+  display: flex;
+}
+.CatagoryButton{
+  align-self: center;
+  margin-top: 20px;
+  height: 100px;
+  width: 80%;
+  border-radius: 40px;
+  border: none;
+  background-color: rgba(128, 198, 194, 0.5);
+  font-size: 30px;
+}
+
+.PostButton{
+  align-self: center;
+  margin-top: 20px;
+  height: 100px;
+  width: 80%;
+  border: none;
+  background-color: #5EBEF0;
+  font-size: 30px;
+}
+
+.LoginContainer{
+  background-color: #6CE4CF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.UsernameBox{
+  padding-top: 100px;
+}
+
+.Username{
+  height: 50px;
+  width: 300px;
+  text-align: center;
+}
+
+.PasswordBox{
+  padding-top: 20px;
+}
+
+.Password{
+  height: 50px;
+  width: 300px;
+  text-align: center;
+}
+
+.Login{
+  padding-top: 100px;
+}
+
+.LoginButton{
+  background-color: #5EBEF0;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.PostContainer{
+  padding-left: 15px;
+  color: white;
+}
