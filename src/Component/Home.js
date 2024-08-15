@@ -1,22 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import "../DesignFile/Design.css"
 
-export default function Home(){
+export default function Home() {
     const navigate = useNavigate();
 
-    return(
-        <div class = "Container">
-            <h1 class = "header">
+    return (
+        <div className="Container">
+            <h1 className="header">
                 Wellcome
             </h1>
-            <div class = "BottomContainer">
-                <button class="Blog"
+            <div className="BottomContainer">
+                <button className="Blog"
                     onClick={() => navigate("/blog")}
                 >
                     Blog
                 </button>
 
-                <button class="Camera"
+                <button className="CamButton"
                     onClick={() => navigate("/camera")}
                 >
                     Camera

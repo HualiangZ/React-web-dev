@@ -1,18 +1,19 @@
-import Data from "../UserData/Login.json"
+import Data from "../Data/Login.json"
 import React, { Component } from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "../DesignFile/Design.css"
-function Login()
-{
+
+
+function Login() {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
     const navigate = useNavigate();
 
-    function Login(){
+    function Login() {
         var found = false;
-        Data.users.forEach(function(user){
-            if(username === user.username && password === user.password){
+        Data.users.forEach(function (user) {
+            if (username === user.username && password === user.password) {
                 console.log(true);
                 found = true;
                 return;
@@ -20,46 +21,45 @@ function Login()
             console.log("no match");
         });
 
-        if(found){
-            Data.auth = true;
+        if (found) {
             navigate("/home");
-        }else{
+        } else {
             alert("Password incorrect")
         }
-        
+
     }
-  
+
     return (
-      <div class="LoginContainer">
-            <h1 class="header">
+        <div className="LoginContainer">
+            <h1 className="header">
                 Wellcome
             </h1>
-            <div class="UsernameBox">
-                <input type="text" 
-                class="Username"
-                placeholder="Username" 
-                defaultValue={username} 
-                onChange={e => setUsername(e.target.value)}
+            <div className="UsernameBox">
+                <input type="text"
+                    className="Username"
+                    placeholder="Username"
+                    defaultValue={username}
+                    onChange={e => setUsername(e.target.value)}
                 />
             </div>
-  
-            <div class="PasswordBox">
-                <input type="text" 
-                class="Password"
-                placeholder="Password" 
-                defaultValue={password} 
-                onChange={e => setPassword(e.target.value)}
+
+            <div className="PasswordBox">
+                <input type="text"
+                    className="Password"
+                    placeholder="Password"
+                    defaultValue={password}
+                    onChange={e => setPassword(e.target.value)}
                 />
             </div>
-  
-            <div class = "Login">
-                <button class="LoginButton"
-                onClick={Login}
+
+            <div className="Login">
+                <button className="LoginButton"
+                    onClick={Login}
                 >
                     Login
                 </button>
             </div>
-      </div>
+        </div>
     );
 }
 

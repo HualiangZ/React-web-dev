@@ -1,4 +1,4 @@
-import Blogs from "../UserData/Blog.json"
+import Blogs from "../Data/Blog.json"
 import { useNavigate } from "react-router-dom";
 import "../DesignFile/Design.css"
 
@@ -6,12 +6,12 @@ export default function Blog() {
     const navigate = useNavigate();
 
     return(
-            <div class = "Container">
-                <div class = "List">
+            <div className = "Container">
+                <div className = "List">
                     {
                         Blogs.Blogs.map((value, index) => {
                             return (
-                                <button class="CatagoryButton" 
+                                <button className="CatagoryButton" 
                                 onClick={()=>navigate(`/blogpost/${index}`)}
                                 >
                                     {Blogs.Blogs[index].key}
@@ -21,15 +21,15 @@ export default function Blog() {
                     }
                 </div>
                 
-                <div class = "BottomContainer">
-                    <button class="Blog"
+                <div className = "BottomContainer">
+                    <button className="Blog"
                     style={{background: "#295EF4"}}
                     onClick={() => navigate("/blog")}
                     >
                         Blog
                     </button>
 
-                        <button class="Camera"
+                        <button className="CamButton"
                             onClick={() => navigate("/camera")}
                         >
                             Camera

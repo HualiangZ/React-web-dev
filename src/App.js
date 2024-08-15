@@ -4,13 +4,14 @@ import Blog from "./Component/Blog"
 import BlogPost from "./Component/BlogPost"
 import BlogContent from "./Component/BlogContent"
 import Camera from "./Component/Camera"
-import Data from "./UserData/Login.json"
+import { createContext, useContext, useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 
+const isLoggedIn = createContext(null);
 
 function App() {
   return(

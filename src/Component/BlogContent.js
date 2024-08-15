@@ -1,4 +1,4 @@
-import Blogs from "../UserData/Blog.json"
+import Blogs from "../Data/Blog.json"
 import { useNavigate, useParams } from "react-router-dom";
 import "../DesignFile/Design.css"
 
@@ -6,26 +6,26 @@ export default function BlogContent(prop){
     const navigate = useNavigate();
     const { CatID, ContID } = useParams()
     return(
-        <div class="Container">
+        <div className="Container">
 
-            <div class = "PostContainer">    
-                <h1 class="PostTitle">
+            <div className = "PostContainer">    
+                <h1 className="PostTitle">
                     {Blogs.Blogs[CatID].Catagory[ContID].key}
                 </h1>
-                <p class="PostBlog">
+                <p className="PostBlog">
                     {Blogs.Blogs[CatID].Catagory[ContID].Blog}
                 </p>
             </div>
 
-            <div class="BottomContainer">
-                <button class="Blog"
+            <div className="BottomContainer">
+                <button className="Blog"
                     style={{background: "#295EF4"}}
                     onClick={() => navigate("/blog")}
                 >
                     Blog
                 </button>
 
-                <button class="Camera"
+                <button className="CamButton"
                     onClick={() => navigate("/camera")}
                 >
                     Camera
