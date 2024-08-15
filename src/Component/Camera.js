@@ -43,13 +43,16 @@ export default function Camera() {
 
             <div className="CameraFeed">
                 <video ref={video}></video>
-                <button onClick={TakePhoto}>
+                
+                <button className="TakePicButton"
+                onClick={TakePhoto}>
                     Take Picture
                 </button>
 
+                <canvas ref={photo}></canvas>
             </div>
 
-            <canvas ref={photo}></canvas>
+            
 
             <div className="BottomContainer">
                 <button className="Blog"
