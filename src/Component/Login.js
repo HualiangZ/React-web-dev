@@ -44,7 +44,7 @@ function Login() {
             </div>
 
             <div className="PasswordBox">
-                <input type="text"
+                <input type="password"
                     className="Password"
                     placeholder="Password"
                     defaultValue={password}
